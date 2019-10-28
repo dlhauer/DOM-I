@@ -87,3 +87,19 @@ addressLine1.innerHTML = siteContent['contact']['address'].replace('Street Somew
 
 //Footer section
 document.querySelector('footer > p').textContent = siteContent['footer']['copyright'];
+
+//Playing with the nav
+
+const navParty = document.createElement('a');
+navParty.textContent = 'Party';
+navParty.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+const navSleep = document.createElement('a');
+navSleep.textContent = 'Sleep';
+navSleep.href = 'https://www.youtube.com/watch?v=WxHJah4sTc8';
+
+const parent = document.querySelector('nav');
+parent.append(navParty);
+parent.prepend(navSleep);
+
+const navLinks = document.querySelectorAll('nav > a');
+navLinks.forEach( element => element.style.color = 'green');
