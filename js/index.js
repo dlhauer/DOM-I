@@ -71,3 +71,14 @@ contentItems.forEach( element => {
 });
 
 document.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
+
+
+//Contact section
+const contactItems = document.querySelectorAll('.contact > *');
+const contactArr = Object.values(siteContent['contact']);
+j = 0;
+contactItems.forEach( element => {
+  element.textContent = contactArr[j];
+  j++;
+});
+
