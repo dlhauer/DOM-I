@@ -103,3 +103,10 @@ parent.prepend(navSleep);
 
 const navLinks = document.querySelectorAll('nav > a');
 navLinks.forEach( element => element.style.color = 'green');
+
+//Playing with more stuff
+
+const text = document.querySelectorAll('body > *');
+text.forEach(element => element.style.fontFamily = 'Montserrat');
+const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+headings.forEach(element => element.style.fontFamily = 'Avenir');
