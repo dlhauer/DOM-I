@@ -51,7 +51,7 @@ navItems.forEach( element => {
 
 //CTA section
 const ctaHead = document.querySelector('.cta-text > h1');
-ctaHead.textContent = siteContent['cta']['h1'];
+ctaHead.innerHTML = siteContent['cta']['h1'].replace(/ /g, '<br>');
 
 const ctaButton = document.querySelector('.cta-text > button');
 ctaButton.textContent = siteContent['cta']['button'];
@@ -82,3 +82,8 @@ contactItems.forEach( element => {
   j++;
 });
 
+const addressLine1 = document.querySelector('.contact > p');
+addressLine1.innerHTML = siteContent['contact']['address'].replace('Street Somewhere', 'Street<br>Somewhere');
+
+//Footer section
+document.querySelector('footer > p').textContent = siteContent['footer']['copyright'];
