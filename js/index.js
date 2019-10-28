@@ -58,3 +58,16 @@ ctaButton.textContent = siteContent['cta']['button'];
 
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent['cta']['img-src'];
+
+//Main content
+const contentItems = document.querySelectorAll('.main-content > div > .text-content > *');
+const contentArr = Object.values(siteContent['main-content']);
+contentArr.splice(4, 1); //Delete the 'middle-img-src' value
+
+j = 0;
+contentItems.forEach( element => {
+  element.textContent = contentArr[j];
+  j++;
+});
+
+document.querySelector('#middle-img').src = siteContent['main-content']['middle-img-src'];
